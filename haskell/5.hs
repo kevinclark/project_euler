@@ -12,6 +12,6 @@ reduction x reduceBy
 main = putStr $ show $ reduction firstGuess 20
     where firstGuess = foldl (*) 1 [2..20]
 
--- time ./5                        (12-28 14:08)
+-- $ time ./5                        (12-28 14:08)
 -- 0.00s user 0.00s system 82% cpu 0.006 total
 

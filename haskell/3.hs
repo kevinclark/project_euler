@@ -11,5 +11,10 @@ lpf currentMax n x
 
 main = putStr $ show $ lpf 1 2 600851475143 
 
--- time ./3                        (12-28 14:02)
+-- $ time ./3                        (12-28 14:02)
 -- 0.00s user 0.01s system 9% cpu 0.116 total
+
+-- With -O
+-- $ time ./3                        (12-28 14:16)
+-- 0.00s user 0.00s system 88% cpu 0.008 total
+

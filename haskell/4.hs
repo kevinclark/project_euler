@@ -10,3 +10,8 @@ main = putStr $ show $ maximum $ filter isPalindrome products
 
 -- $ time ./4                        (12-28 14:00)
 -- 0.27s user 0.01s system 69% cpu 0.406 total
+
+-- With -O
+-- $ time ./4                        (12-28 14:18)
+-- 0.19s user 0.01s system 96% cpu 0.202 total
+

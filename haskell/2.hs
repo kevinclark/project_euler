@@ -15,3 +15,8 @@ main = putStr $ show $ sum $ filter even $ fibsUnderFourMil
 
 -- $ time ./2                        (12-28 14:02)
 -- 3.49s user 0.05s system 97% cpu 3.640 total
+
+-- With -O
+-- $ time ./2                        (12-28 14:16)
+-- 0.70s user 0.01s system 95% cpu 0.751 total
+
