@@ -2,9 +2,6 @@
 
 -- What is the smallest number that is evenly divisible by all of the numbers from 1 to 20?
 
-
-
-
 reduction x reduceBy
     | reduceBy == 1 = x
     | (x `mod` reduceBy == 0) &&
