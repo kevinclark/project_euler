@@ -12,3 +12,6 @@ fib x = fib(x - 1) + fib(x - 2)
 
 main = putStr $ show $ sum $ filter even $ fibsUnderFourMil
     where fibsUnderFourMil = takeWhile (< 4000000) $ map fib [1..]
+
+-- $ time ./2                        (12-28 14:02)
+-- 3.49s user 0.05s system 97% cpu 3.640 total

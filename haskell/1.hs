@@ -7,3 +7,7 @@ naturalNumbers = [1..]
 multiplesOfThreeOrFive = [ x | x <- naturalNumbers, x `mod` 3 == 0 || x `mod` 5 == 0]
 
 main = putStr $ show $ sum $ takeWhile (< 1000) multiplesOfThreeOrFive 
+
+-- $ time ./1                        (12-28 13:53)
+-- 0.00s user 0.00s system 83% cpu 0.007 total
+

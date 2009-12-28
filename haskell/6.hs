@@ -12,3 +12,6 @@ sumOfSquares ceil = sum $ map (^ 2) [1..ceil]
 squareOfSums ceil = (sum [1..ceil]) ^ 2
 
 main = putStr $ show $ abs $ (sumOfSquares 100) - (squareOfSums 100)
+
+-- time ./6                        (12-28 14:09)
+-- 0.00s user 0.00s system 81% cpu 0.006 total

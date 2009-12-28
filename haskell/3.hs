@@ -2,10 +2,6 @@
 
 -- What is the largest prime factor of the number 600851475143 ?
 
--- Let x be 2
--- If x `mod` 2 == 0, set the largest value to 2 and call again
--- if not, increment
-
 lpf :: Integer -> Integer -> Integer -> Integer
 
 lpf currentMax n x
@@ -14,3 +10,6 @@ lpf currentMax n x
     | otherwise = lpf currentMax (n + 1) x
 
 main = putStr $ show $ lpf 1 2 600851475143 
+
+-- time ./3                        (12-28 14:02)
+-- 0.00s user 0.01s system 9% cpu 0.116 total

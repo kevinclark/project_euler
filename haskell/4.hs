@@ -7,3 +7,6 @@ products = [ x * y | x <- [100..999], y <- [100..999] ]
 isPalindrome x = show x == (reverse $ show x)
 
 main = putStr $ show $ maximum $ filter isPalindrome products
+
+-- $ time ./4                        (12-28 14:00)
+-- 0.27s user 0.01s system 69% cpu 0.406 total
