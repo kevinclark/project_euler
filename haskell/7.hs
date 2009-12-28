@@ -5,18 +5,19 @@
 isPrime :: Integer -> Bool
 isPrime x
     | x == 2 = True
-    | otherwise = all (\y -> x `mod` y /= 0) [2..ceil]
+    | otherwise = all (\y -> x `mod` y /= 0) (2:[3,5..ceil])
         where ceil = floor $ sqrt $ fromInteger x
 
 primes :: [Integer]
-primes = [ x | x <- [2..], isPrime x ]
+primes = [ x | x <- 2 : [3,5..], isPrime x ]
 
 main = putStr $ show $ last $ take 10001 primes
 
--- $ time ./7                        (12-28 14:10)
--- 0.36s user 0.01s system 98% cpu 0.378 total
+-- $ time ./7                        (12-28 18:45)
+-- 0.19s user 0.01s system 88% cpu 0.226 total
 
 -- With -O
--- $ time ./7                        (12-28 14:19)
--- 0.21s user 0.01s system 89% cpu 0.238 total
+-- $ time ./7                        (12-28 18:46)
+-- 0.19s user 0.01s system 96% cpu 0.203 total
+
 
