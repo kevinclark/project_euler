@@ -13,6 +13,3 @@ main = putStr $ show $ lpf 600851475143
 -- $ time ./3                        (12-29 04:46)
 -- 6857./3  0.00s user 0.00s system 86% cpu 0.007 total
 
--- $ time ./3                        (12-29 04:32)
--- 0.01s user 0.00s system 83% cpu 0.016 total
-
