@@ -2,19 +2,23 @@
 
 -- What is the largest prime factor of the number 600851475143 ?
 
-lpf :: Integer -> Integer -> Integer -> Integer
+isPrime :: Integer -> Bool
+isPrime x
+    | x == 2 = True
+    | otherwise = all (\y -> x `mod` y /= 0) (2:[3,5..ceil])
+        where ceil = floor $ sqrt $ fromInteger x
 
-lpf currentMax n x
-    | n > x = currentMax
-    | x `mod` n == 0 = lpf n (n + 1) (x `div` n)
-    | otherwise = lpf currentMax (n + 1) x
+primes :: [Integer]
+primes = [ x | x <- 2 : [3,5..], isPrime x ]
 
-main = putStr $ show $ lpf 1 2 600851475143 
+lpf x = lf x 1 primes
+    where lf x' m (p:ps)
+            | p > x' = m
+            | x' `mod` p == 0 = lf (x' `div` p) p (p:ps)
+            | otherwise = lf x' m ps
 
--- $ time ./3                        (12-28 14:02)
--- 0.00s user 0.01s system 9% cpu 0.116 total
+main = putStr $ show $ lpf 600851475143 
 
--- With -O
--- $ time ./3                        (12-28 14:16)
--- 0.00s user 0.00s system 88% cpu 0.008 total
+-- $ time ./3                        (12-29 04:32)
+-- 0.01s user 0.00s system 83% cpu 0.016 total
 
